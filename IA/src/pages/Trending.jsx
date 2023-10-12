@@ -26,22 +26,42 @@ const LeftSection = ({ img, author, title, desc, date }) => {
 
 const MiddleSectionItem = ({ img, author, title, date }) => {
     return (
-        <Box className="flex item-center">
-            <Box className="h-28 w-28">
+        <Box className="flex gap-5 item-center">
+            <Box className="w-36 h-36">
                 <img src={img} alt="" />
             </Box>
             <Box className="flex flex-col items-start justify-start">
-                <Box className="flex gap-4">
-                    <Typography>
+                <Box className="flex items-center gap-4">
+                    <Typography
+                        sx={{
+                            fontWeight: 'bold',
+                            fontFamily: 'var(--font)',
+                            fontSize: '0.8rem'
+                        }}
+                    >
                         {author}
                     </Typography>
-                    -
-                    <Typography>
+                    <Box width={4} height={0.1} sx={{
+                        backgroundColor: 'black'
+                    }} />
+                    <Typography
+                        sx={{
+                            fontFamily: 'var(--font)',
+                            fontSize: '0.8rem',
+                            color: 'gray'
+                        }}
+                    >
                         {date}
                     </Typography>
                 </Box>
                 <Box>
-                    <Typography>
+                    <Typography
+                        sx={{
+                            fontWeight: 'bold',
+                            fontFamily: 'var(--font)',
+                            fontSize: '0.8rem'
+                        }}
+                    >
                         {title}
                     </Typography>
                 </Box>
@@ -52,10 +72,10 @@ const MiddleSectionItem = ({ img, author, title, date }) => {
 const MiddleSection = () => {
     return (
         <Box className="flex flex-col gap-4">
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020"/>
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020"/>
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020"/>
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020"/>
+            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
         </Box>
     )
 }
