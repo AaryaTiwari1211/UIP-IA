@@ -22,6 +22,19 @@ const PhotoBanner = ({ img, text }) => {
     );
 }
 
+const PhotoBannerBeeg = ({ img, text }) => {
+    return (
+        <Card sx={{ maxWidth: '100%', position: 'relative', maxHeight: '400px' }}>
+            <img src={img} alt="Banner" style={{ width: '100%', height: 'auto' }} />
+            <CardContent sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', position: 'absolute', bottom: 0 }}>
+                <Typography variant="h6" component="div" sx={{ color: 'white' }}>
+                    {text}
+                </Typography>
+            </CardContent>
+        </Card>
+    );
+}
+
 const Article = () => {
     const md = useMediaQuery('(min-width:600px)');
     return (
@@ -40,7 +53,7 @@ const Article = () => {
                         <Grid item xs={12} md={12} lg={6} sx={{
                             height: '100%'
                         }}>
-                            <PhotoBanner img={img3} text={"masti"} />
+                            <PhotoBannerBeeg img={img3} text={"masti"} />
                         </Grid>
                         <Grid item xs={12} md={12} lg={6} container spacing={1}>
                             <Grid item xs={12} md={12} lg={6}>
