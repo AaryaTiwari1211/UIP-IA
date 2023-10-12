@@ -9,29 +9,6 @@ const LeftSection = ({ img, author, title, desc, date }) => {
             </Box>
             <Box className="flex flex-col gap-2">
                 <Box className="flex gap-3">
-                    <Typography variant="p" color="black">{author}</Typography>
-                    {" "} - {" "}
-                    <Typography>{date}</Typography>
-                </Box>
-                <Box>
-                    <Typography>{title}</Typography>
-                </Box>
-            </Box>
-            <Box>
-                <Typography>{desc}</Typography>
-            </Box>
-        </Box>
-    )
-}
-
-const MiddleSectionItem = ({ img, author, title, date }) => {
-    return (
-        <Box className="flex gap-5 item-center">
-            <Box className="w-36 h-36">
-                <img src={img} alt="" />
-            </Box>
-            <Box className="flex flex-col items-start justify-start">
-                <Box className="flex items-center gap-4">
                     <Typography
                         sx={{
                             fontWeight: 'bold',
@@ -59,7 +36,62 @@ const MiddleSectionItem = ({ img, author, title, date }) => {
                         sx={{
                             fontWeight: 'bold',
                             fontFamily: 'var(--font)',
+                            fontSize: '1rem'
+                        }}
+                    >
+                        {title}
+                    </Typography>
+                </Box>
+            </Box>
+            <Box>
+                <Typography
+                    sx={{
+                        fontFamily: 'var(--font)',
+                        fontSize: '0.9rem',
+                    }}
+                >
+                    {desc}
+                </Typography>
+            </Box>
+        </Box>
+    )
+}
+
+const MiddleSectionItem = ({ img, author, title, date }) => {
+    return (
+        <Box className="flex gap-5 item-center">
+            <Box className="w-36 h-36">
+                <img src={img} alt="" />
+            </Box>
+            <Box className="flex flex-col items-start justify-start">
+                <Box className="flex items-center gap-4">
+                    <Typography
+                        sx={{
+                            fontFamily: 'var(--font)',
                             fontSize: '0.8rem'
+                        }}
+                    >
+                        {author}
+                    </Typography>
+                    <Box width={4} height={0.1} sx={{
+                        backgroundColor: 'black'
+                    }} />
+                    <Typography
+                        sx={{
+                            fontFamily: 'var(--font)',
+                            fontSize: '0.8rem',
+                            color: 'gray'
+                        }}
+                    >
+                        {date}
+                    </Typography>
+                </Box>
+                <Box>
+                    <Typography
+                        sx={{
+                            fontWeight: 'bold',
+                            fontFamily: 'var(--font)',
+                            fontSize: '1rem'
                         }}
                     >
                         {title}
@@ -80,6 +112,10 @@ const MiddleSection = () => {
     )
 }
 
+const RightSection = () => {
+
+}
+
 const Trending = () => {
     return (
         <div className='m-3'>
@@ -93,7 +129,13 @@ const Trending = () => {
             <Box height={20} />
             <Grid container spacing={2}>
                 <Grid item xs={4}>
-                    <LeftSection img={img1} title="Aarya Tiwari" desc="lorem" author="Aarya Dhairya Dhruv" date="27/01/24" />
+                    <LeftSection img={img1} title="Aarya Tiwari" desc="Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                    It was popularised in the 1960s with the release of Letraset sheets containing 
+                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+                    PageMaker including versions of Lorem Ipsum." author="Aarya Dhairya Dhruv" date="27/01/24" />
                 </Grid>
                 <Grid item xs={5}>
                     <MiddleSection />

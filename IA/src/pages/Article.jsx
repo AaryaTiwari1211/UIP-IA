@@ -39,38 +39,45 @@ const Article = () => {
     const md = useMediaQuery('(min-width:600px)');
     return (
         <div className='flex w-full'>
-            {
-                md ? <SidebarArticle /> : ''
-            }
-
-            <Box className="w-full">
-                <SearchAppBar />
-                <Box className="m-2">
-                    <Grid container spacing={1}>
-                        {/* <div className="h-screen w-auto">
+            <Grid container>
+                <Grid item xs={4} sx={{
+                    backgroundColor: '#1e1e1e',
+                }}>
+                    {
+                        md ? <SidebarArticle /> : ''
+                    }
+                </Grid>
+                <Grid item xs={8}>
+                    <Box className="w-full">
+                        <SearchAppBar />
+                        <Box className="m-2">
+                            <Grid container spacing={1}>
+                                {/* <div className="w-auto h-screen">
                             <PhotoBanner img={img3} />
                         </div> */}
-                        <Grid item xs={12} md={12} lg={6} sx={{
-                            height: '100%'
-                        }}>
-                            <PhotoBannerBeeg img={img3} text={"masti"} />
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6} container spacing={1}>
-                            <Grid item xs={12} md={12} lg={6}>
-                                <PhotoBanner img={img1} text={"landLoond"} />
+                                <Grid item xs={12} md={12} lg={6} sx={{
+                                    height: '100%'
+                                }}>
+                                    <PhotoBannerBeeg img={img3} text={"masti"} />
+                                </Grid>
+                                <Grid item xs={12} md={12} lg={6} container spacing={1}>
+                                    <Grid item xs={12} md={12} lg={6}>
+                                        <PhotoBanner img={img1} text={"landLoond"} />
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={6}>
+                                        <PhotoBanner img={img1} text={"landLoond"} />
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={12}>
+                                        <PhotoBanner img={img1} text={"landLoond"} />
+                                    </Grid>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} md={12} lg={6}>
-                                <PhotoBanner img={img1} text={"landLoond"}/>
-                            </Grid>
-                            <Grid item xs={12} md={12} lg={12}>
-                                <PhotoBanner img={img1} text={"landLoond"}/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Box>
-                <Trending />
-            </Box>
-        </div>
+                        </Box>
+                        <Trending />
+                    </Box>
+                </Grid>
+            </Grid>
+        </div >
     )
 }
 

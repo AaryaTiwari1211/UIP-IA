@@ -2,20 +2,25 @@ import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { Box, useMediaQuery } from '@mui/material'
 import logo from '../assets/logo.png'
+import HomeIcon from '@mui/icons-material/Home';
+import { Home } from '@mui/icons-material';
 
 const SidebarArticle = () => {
     return (
-        <div className='w-1/3 bg-[#1e1e1e]'>
+        <div className='bg-[#1e1e1e]'>
             <Box sx={{
                 backgroundColor: '#1e1e1e !important',
                 height: '100vh',
+                position: 'fixed',
                 '& .css-ewdv3l': {
                     display: 'flex !important',
                     flexDirection: 'column !important',
                     gap: '10px !important',
                 },
-                width: '33.333  %',
-                position: 'fixed',
+                '& .css-1wvake5': {
+                    border: 'none !important',
+                    boxShadow: 'none !important',
+                },
                 '& .ps-menuitem-root': {
                     backgroundColor: '#1e1e1e !important',
                     fontFamily: 'var(--font)',
@@ -28,26 +33,26 @@ const SidebarArticle = () => {
                     color: `#000000 !important`,
                     backgroundColor: `#FFFFFF !important`,
                 },
+                
             }}>
                 <Sidebar>
                     <Menu className='bg-[#1e1e1e]'>
                         <Box className="flex justify-center w-full py-4">
                             <img src={logo} alt="logo" className='' />
                         </Box>
-                        <SubMenu label="Charts" className='uppercase'>
-                            <MenuItem className='uppercase'> Pie charts </MenuItem>
-                            <MenuItem className='uppercase'> Line charts </MenuItem>
-                        </SubMenu>
-                        <MenuItem className='uppercase'> Documentation </MenuItem>
-                        <MenuItem className='uppercase'> Calendar </MenuItem>
-                        <MenuItem className='uppercase'> Documentation </MenuItem>
-                        <MenuItem className='uppercase'> Calendar </MenuItem>
-                        <MenuItem className='uppercase'> Documentation </MenuItem>
-                        <MenuItem className='uppercase'> Calendar </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Home </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Trending </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Entertainment </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Sports </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Lifestyle </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Business </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Politics </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Corruption </MenuItem>
+                        <MenuItem icon={<HomeIcon sx={{color: 'white',}} />} className='uppercase'> Technology </MenuItem>
                     </Menu>
                 </Sidebar>
             </Box>
-         </div>
+        </div>
     )
 }
 
