@@ -153,9 +153,15 @@ export default function PrimarySearchAppBar() {
         </Menu>
     );
 
+    const StyledAppBar= styled(AppBar)(() => ({
+        backgroundColor: "#1e1e1e",
+        color: "white",
+        // boxShadow: "none",
+    }));
+
     return (
         <Box className="w-full">
-            <AppBar position="relative">
+            <StyledAppBar position="relative" >
                 <Toolbar>
                     <Search>
                         <SearchIconWrapper>
@@ -167,7 +173,7 @@ export default function PrimarySearchAppBar() {
                         />
                     </Search>
                 </Toolbar>
-            </AppBar>
+            </StyledAppBar>
             {renderMobileMenu}
             {renderMenu}
         </Box>
