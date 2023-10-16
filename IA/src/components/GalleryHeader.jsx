@@ -6,7 +6,7 @@ export const Header = () => {
         <>
             <div className='flex flex-row justify-between  bg-[#000000]'>
                 <div>
-                    <img src={jhaad} alt="jhaad" className='hidden sm:block sm:w-2/3' />
+                    <img src={jhaad} alt="jhaad" className='hidden sm:block sm:w-[30rem]' />
                 </div>
                 <div className='sm:flex sm:flex-col sm:p-5 gap-16 '>
                     <div className='sm:flex flex-row gap-10 hidden'>
