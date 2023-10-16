@@ -1,8 +1,11 @@
 import React from 'react'
+import { Header } from '../components/GalleryHeader'
 
 const Gallery = () => {
     return (
-        <div>Gallery</div>
+        <>
+            <Header />
+        </>
     )
 }
 
