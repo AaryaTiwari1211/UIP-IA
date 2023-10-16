@@ -1,12 +1,12 @@
 import React from 'react'
 import { Header } from '../components/GalleryHeader'
-import DrawerAppBar from '../components/GalleryApeBar'
+import { GalleryGrid } from '../components/GalleryCardGrid'
 
 const Gallery = () => {
     return (
         <>
-            <DrawerAppBar />
             <Header />
+            <GalleryGrid />
         </>
     )
 }
