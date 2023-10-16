@@ -9,29 +9,25 @@ import img2 from '../assets/home/img2.avif'
 import img3 from '../assets/home/img3.avif'
 import img4 from '../assets/home/img4.avif'
 import Trending from './Trending'
+import TimelineComp from '../components/Timeline'
+
 const PhotoBanner = ({ img, text }) => {
+    const smallImageStyle = {
+        width:'250px',
+        height:'auto'
+    }
     return (
-        <Card sx={{ maxWidth: '100%', position: 'relative', maxHeight: '400px' }}>
-            <img src={img} alt="Banner" style={{ width: '100%', height: 'auto' }} />
-            <CardContent sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', position: 'absolute', bottom: 0 }}>
-                <Typography variant="h6" component="div" sx={{ color: 'white' }}>
-                    {text}
-                </Typography>
-            </CardContent>
-        </Card>
+        <img src={img} alt="Banner" style={smallImageStyle} />
     );
 }
 
 const PhotoBannerBeeg = ({ img, text }) => {
+    const bigImageStyle = {
+        width:'600px',
+        height:'auto'
+    }
     return (
-        <Card sx={{ maxWidth: '100%', position: 'relative', maxHeight: '400px' }}>
-            <img src={img} alt="Banner" style={{ width: '100%', height: 'auto' }} />
-            <CardContent sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', position: 'absolute', bottom: 0 }}>
-                <Typography variant="h6" component="div" sx={{ color: 'white' }}>
-                    {text}
-                </Typography>
-            </CardContent>
-        </Card>
+        <img src={img} alt="Banner" style={bigImageStyle} />
     );
 }
 
@@ -46,29 +42,34 @@ const Article = () => {
                     {
                         md ? <SidebarArticle /> : ''
                     }
+                    <TimelineComp />
                 </Grid>
-                <Grid item xs={8}>
+                <Grid container item xs={8}>
                     <Box className="w-full">
-                        <SearchAppBar />
+                        <Grid item xs={4} spacing={2} sx={{
+                            marginLeft: '8px',
+                            marginTop: '10px',
+                        }}>
+                            <SearchAppBar />
+                        </Grid>
                         <Box className="m-2">
                             <Grid container spacing={1}>
-                                {/* <div className="w-auto h-screen">
-                            <PhotoBanner img={img3} />
-                        </div> */}
-                                <Grid item xs={12} md={12} lg={6} sx={{
+                                <Grid item xs={12} md={12} lg={6} justifyContent="center" alignItems="center" sx={{
                                     height: '100%'
                                 }}>
-                                    <PhotoBannerBeeg img={img3} text={"masti"} />
+                                    <PhotoBannerBeeg img="http://annehayes.com.au/wp-content/uploads/2016/02/newspaperface.jpg" />
                                 </Grid>
                                 <Grid item xs={12} md={12} lg={6} container spacing={1}>
-                                    <Grid item xs={12} md={12} lg={6}>
-                                        <PhotoBanner img={img1} text={"landLoond"} />
-                                    </Grid>
-                                    <Grid item xs={12} md={12} lg={6}>
-                                        <PhotoBanner img={img1} text={"landLoond"} />
-                                    </Grid>
-                                    <Grid item xs={12} md={12} lg={12}>
-                                        <PhotoBanner img={img1} text={"landLoond"} />
+                                    <Grid container>
+                                        <Grid item xs={12} md={12} lg={6}>
+                                            <PhotoBanner img={img1} text={"landLoond"} />
+                                        </Grid>
+                                        <Grid item xs={12} md={12} lg={6}>
+                                            <PhotoBanner img={img1} text={"landLoond"} />
+                                        </Grid>
+                                        <Grid item xs={12} md={12} lg={12}>
+                                            <PhotoBanner img={img1} text={"landLoond"} />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>

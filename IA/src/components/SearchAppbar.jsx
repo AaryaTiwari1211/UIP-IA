@@ -161,7 +161,9 @@ export default function PrimarySearchAppBar() {
 
     return (
         <Box className="w-full">
-            <StyledAppBar position="relative" >
+            <StyledAppBar position="relative" sx={{
+                borderRadius:'5px'
+            }}>
                 <Toolbar>
                     <Search>
                         <SearchIconWrapper>
