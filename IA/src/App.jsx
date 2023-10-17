@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <DrawerAppBar />
         <AppRoutes />
       </BrowserRouter>
     </>
