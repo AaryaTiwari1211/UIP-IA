@@ -14,6 +14,16 @@ export const Header = () => {
                     Discover curated art & design
                 </Typography>
             </div>
+            <div className='hidden md:flex md:flex-row md:justify-center md:items-center md:gap-4 md:bg-black md:p-16'>
+                <Typography variant='h4' className='text-penk'>What&nbsp;we've&nbsp;done</Typography>
+                <div className='w-full h-1 bg-penk' />
+                <Typography variant='h5' className='text-penk'>Capella Sydney, Australia
+                    Mondrian, Singapore
+                    Patina Hotel, Maldives</Typography>
+                <Typography variant='h5' className='text-penk'>Ritz-Carlton Hotel, Mald
+                    Swarowski, China
+                    Frasers Tower, Singapor</Typography>
+            </div>
         </>
     )
 };
