@@ -17,7 +17,7 @@ export function TradeProgramGrid() {
                     <Grid item xs={12} sm={6} md={4} className='hover:scale-105 duration-500 ease-in-out relative'>
                         <img src={img2} alt="img1" className='w-full cursor-pointer blur-sm opacity-80' />
                         <div className="absolute inset-0 flex items-center justify-center font-[lora] text-5xl text-white">
-                            <p>Dedicated Teams</p>
+                            <p>Project Tools</p>
                         </div>
                         <Typography variant='h4' sx={{
                             pt: 1,
@@ -26,7 +26,7 @@ export function TradeProgramGrid() {
                     <Grid item xs={12} sm={6} md={4} className='hover:scale-105 duration-500 ease-in-out relative'>
                         <img src={img3} alt="img1" className='w-full cursor-pointer blur-sm opacity-80' />
                         <div className="absolute inset-0 flex items-center justify-center font-[lora] text-5xl text-white">
-                            <p>Dedicated Teams</p>
+                            <p>Trade Discounts</p>
                         </div>
                         <Typography variant='h4' sx={{
                             pt: 1,

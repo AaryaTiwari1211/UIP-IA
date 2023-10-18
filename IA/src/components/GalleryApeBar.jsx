@@ -39,7 +39,7 @@ HideOnScroll.propTypes = {
 
 
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const navItems = ['FIND ART', 'COLLECTIBLE DESIGN', 'FOR TRADE', 'ART CONSULTANCY'];
 
 function DrawerAppBar(props) {
@@ -84,7 +84,7 @@ function DrawerAppBar(props) {
                     boxShadow: 'none',
                 }
             }>
-                <Toolbar>
+                <Toolbar  className='hidden'>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -128,9 +128,17 @@ function DrawerAppBar(props) {
                     {drawer}
                 </Drawer>
             </nav>
-            <Box component="main" sx={{ p: 3 }}>
+            <Box component="main" sx={{ p: 3 }} className='hidden lg:block'>
                 <Toolbar />
                 <Typography variant='h1' className='text-penk text-center' sx={{
+                    fontFamily: "Lora",
+                }}>
+                    Transforming spaces with Art and Design
+                </Typography>
+            </Box>
+            <Box component="main" sx={{ p: 3 }} className='lg:hidden'>
+                <Toolbar />
+                <Typography variant='h4' className='text-penk text-center' sx={{
                     fontFamily: "Lora",
                 }}>
                     Transforming spaces with Art and Design
