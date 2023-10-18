@@ -7,8 +7,8 @@ import Gallery from "./pages/Gallery"
 export const AppRoutes = () => {
     return(
         <Routes>
-            <Route path="/" element={<Article />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/article" element={<Article />} />
+            <Route path="/" element={<Gallery />} />
         </Routes>
     )
 }
