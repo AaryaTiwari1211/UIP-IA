@@ -26,6 +26,7 @@ const PhotoBannerBeeg = ({ img, text }) => {
         width:'600px',
         height:'auto'
     }
+    
     return (
         <img src={img} alt="Banner" style={bigImageStyle} />
     );
