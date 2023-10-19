@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Grid, Card, CardContent, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 import img1 from '../assets/home/img1.avif'
 const LeftSection = ({ img, author, title, desc, date }) => {
     return (
@@ -57,9 +58,9 @@ const LeftSection = ({ img, author, title, desc, date }) => {
     )
 }
 
-const MiddleSectionItem = ({ img, author, title, date }) => {
+const MiddleSectionItem = ({ img, author, title, date, link }) => {
     return (
-        <Box className="flex gap-5 item-center">
+        <Link to={link} className="flex gap-5 item-center">
             <Box className="w-36 h-36">
                 <img src={img} alt="" />
             </Box>
@@ -98,16 +99,16 @@ const MiddleSectionItem = ({ img, author, title, date }) => {
                     </Typography>
                 </Box>
             </Box>
-        </Box>
+        </Link>
     )
 }
 const MiddleSection = () => {
     return (
         <Box className="flex flex-col gap-4">
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
-            <MiddleSectionItem img={img1} author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} link="/article/1"  author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} link="/article/1" author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} link="/article/1" author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
+            <MiddleSectionItem img={img1} link="/article/1" author="Aarya Dhairya Dhruv" title="Penn’s expanding political climate gears up for 2020 election" date="27 Dec 2020" />
         </Box>
     )
 }
@@ -118,7 +119,7 @@ const RightSection = () => {
 
 const Trending = () => {
     return (
-        <div className='m-3'>
+        <div className='m-2'>
             <Typography variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                 Trending
             </Typography>
@@ -128,7 +129,7 @@ const Trending = () => {
             }} />
             <Box height={20} />
             <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={12} lg={5}>
                     <LeftSection img={img1} title="Aarya Tiwari" desc="Lorem Ipsum is simply dummy text of the printing and typesetting 
                     industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
                     type and scrambled it to make a type specimen book. It has survived not only five centuries, 
@@ -137,7 +138,7 @@ const Trending = () => {
                     Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
                     PageMaker including versions of Lorem Ipsum." author="Aarya Dhairya Dhruv" date="27/01/24" />
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={12} md={12} lg={7} >
                     <MiddleSection />
                 </Grid>
             </Grid>

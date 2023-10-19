@@ -27,12 +27,17 @@ const Timeliner = ({ text }) => {
 const TimelineComp = () => {
     return (
         <Timeline sx={{
-            marginTop:'90px'
+            marginTop: '145px',
         }}>
+            <Timeliner text="Ceasefire plans stall as Israel intensifies strikes on Gaza"/>
             <Timeliner text="Ceasefire plans stall as Israel intensifies strikes on Gaza"/>
             <Timeliner text="Senate leader Schumer says chamber will rush through military aid to Israel"/>
             <Timeliner text="US boosts Middle East firepower in case Israel-Hamas war spreads"/>
             <Timeliner text="Global markets cautious over Israel-Hamas escalation fears"/>
+            <Timeliner text="Trump's legal troubles keep fueling surges in fundraising"/>
+            <Timeliner text="Trump's legal troubles keep fueling surges in fundraising"/>
+            <Timeliner text="Trump's legal troubles keep fueling surges in fundraising"/>
+            <Timeliner text="Trump's legal troubles keep fueling surges in fundraising"/>
             <Timeliner text="Trump's legal troubles keep fueling surges in fundraising"/>
             <Timeliner text="Images from 600 days of fighting in Ukraine after Russia launched an all-out invasion by land, air and sea, the biggest attack by one state against another in Europe since World War Two."/>
         </Timeline>
