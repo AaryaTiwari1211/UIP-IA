@@ -17,6 +17,8 @@ import Button from '@mui/material/Button';
 import jhaad from '../assets/galleryjhaad.svg';
 import { useScrollTrigger, Slide } from '@mui/material';
 import { Height } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+
 
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -46,23 +48,25 @@ const navItems = ['FIND ART', 'COLLECTIBLE DESIGN', 'FOR TRADE', 'ART CONSULTANC
 function DrawerAppBar(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
     const drawer = (
         <Box onClick={handleDrawerToggle} className='text-penk' sx={{ textAlign: 'center', background: 'transparent', Height: '100vh' }}>
-            <Typography variant="h4" sx={{ my: 2, fontFamily:'lora' }}>
+            <Typography variant="h4" sx={{ my: 2, fontFamily: 'lora' }}>
                 UIP IA
             </Typography>
             <Divider />
             <List>
                 {navItems.map((item) => (
+
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center', py: '2rem', fontFamily:'lora' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
+                        <Link to='/article'>
+                            <ListItemButton sx={{ textAlign: 'center', py: '2rem', fontFamily: 'lora' }}>
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
@@ -104,9 +108,11 @@ function DrawerAppBar(props) {
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {navItems.map((item) => (
-                                <Button key={item} sx={{ color: '#FFD8D8', fontSize: '1.5rem', mx: '1rem' }} size='lg'>
-                                    {item}
-                                </Button>
+                                <Link to='/article'>
+                                    <Button key={item} sx={{ color: '#FFD8D8', fontSize: '1.5rem', mx: '1rem' }} size='lg'>
+                                        {item}
+                                    </Button>
+                                </Link>
                             ))}
                         </Box>
                     </Toolbar>
